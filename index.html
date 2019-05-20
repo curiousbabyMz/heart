@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="out">
+			<div class="txt">
+				喜欢丹宝宝~
+			</div>
+			<div class="heart">
+				<div class="sq bgcolor">
+					<div class="circle bgcolor"></div>
+					<div class="circle bgcolor"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<style type="text/css">
+		html,
+		body {
+			height: 100%;
+			margin: 0;
+		}
+
+		body {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.txt {
+			font-size: 1.5rem;
+			color: orangered;
+		}
+
+		.bgcolor {
+			background: orangered;
+		}
+
+		.out {
+			display: flex;
+			align-items: center;
+		}
+
+		.heart {
+			width: 1rem;
+			height: 1rem;
+			margin: 1rem;
+			animation: heartBeat .25s ease-out infinite alternate;
+		}
+
+		.sq {
+			transform: rotate(-45deg);
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+
+		.circle {
+			/* display: none; */
+			border-radius: 50%;
+			width: 100%;
+			height: 100%;
+		}
+
+		.circle:first-of-type {
+			transform: translateX(50%);
+		}
+
+		.circle:last-of-type {
+			transform: translateY(-150%);
+		}
+
+		@keyframes heartBeat {
+			0% {
+				transform: none;
+			}
+
+			100% {
+				transform: translateY(-20%) scale(1.2);
+			}
+		}
+	</style>
+</html>
